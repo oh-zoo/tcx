@@ -1,0 +1,87 @@
+{
+  "author": "",
+  "bin": {
+    "mirin": "./bin/run.js"
+  },
+  "dependencies": {
+    "@oclif/core": "^3",
+    "@oclif/plugin-help": "^5",
+    "@oclif/plugin-plugins": "^3.8.4",
+    "@xchainjs/xchain-bitcoin": "^0.22.4",
+    "@xchainjs/xchain-bitcoincash": "^0.16.4",
+    "@xchainjs/xchain-client": "^0.14.2",
+    "@xchainjs/xchain-crypto": "^0.3.0",
+    "@xchainjs/xchain-doge": "^0.6.5",
+    "@xchainjs/xchain-litecoin": "^0.12.4",
+    "@xchainjs/xchain-util": "^0.13.2",
+    "axios": "^1.5.1",
+    "chalk": "^5.3.0",
+    "eslint-config-prettier": "^9.0.0",
+    "inquirer": "^9.2.11",
+    "qrcode": "^1.5.3"
+  },
+  "description": "oclif example Hello World CLI",
+  "devDependencies": {
+    "@oclif/prettier-config": "^0.2.1",
+    "@oclif/test": "^3",
+    "@types/chai": "^4",
+    "@types/inquirer": "^9.0.4",
+    "@types/mocha": "^9.0.0",
+    "@types/node": "^18",
+    "@types/qrcode": "^1.5.2",
+    "chai": "^4",
+    "eslint": "^8.51.0",
+    "eslint-config-oclif": "^5",
+    "eslint-config-oclif-typescript": "^3",
+    "mocha": "^10",
+    "oclif": "^3.17.2",
+    "shx": "^0.3.3",
+    "ts-node": "^10.9.1",
+    "typescript": "^5"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "files": [
+    "/bin",
+    "/dist",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json"
+  ],
+  "homepage": "",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "name": "mirin",
+  "oclif": {
+    "bin": "mirin",
+    "dirname": "mirin",
+    "commands": "./dist/commands",
+    "default": "root",
+    "plugins": [
+      "@oclif/plugin-help",
+      "@oclif/plugin-plugins"
+    ],
+    "topicSeparator": " ",
+    "topics": {
+      "hello": {
+        "description": "Say hello to the world and others"
+      }
+    }
+  },
+  "repository": "",
+  "scripts": {
+    "build": "shx rm -rf dist && tsc -b",
+    "lint": "eslint . --ext .ts",
+    "postpack": "shx rm -f oclif.manifest.json",
+    "posttest": "npm run lint",
+    "prepack": "npm run build && oclif manifest && oclif readme",
+    "test": "mocha --forbid-only \"test/**/*.test.ts\"",
+    "version": "oclif readme && git add README.md"
+  },
+  "version": "0.0.0",
+  "bugs": "",
+  "keywords": [
+    "oclif"
+  ],
+  "types": "dist/index.d.ts"
+}
