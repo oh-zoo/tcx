@@ -28,7 +28,7 @@
     "@types/inquirer": "^9.0.4",
     "@types/mocha": "^9.0.0",
     "@types/node": "^18",
-    "@types/qrcode": "^1.5.2",
+    "@types/qrcode": "^1.5.4",
     "chai": "^4",
     "eslint": "^8.51.0",
     "eslint-config-oclif": "^5",
