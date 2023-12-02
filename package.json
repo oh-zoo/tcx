@@ -30,7 +30,7 @@
     "@types/node": "^18",
     "@types/qrcode": "^1.5.2",
     "chai": "^4",
-    "eslint": "^8.51.0",
+    "eslint": "^8.55.0",
     "eslint-config-oclif": "^5",
     "eslint-config-oclif-typescript": "^3",
     "mocha": "^10",
